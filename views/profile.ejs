@@ -1,0 +1,13 @@
+<!doctype HTML>
+<html>
+<head>
+  <title><%=user.username;%>'s Profile'</title>
+</head>
+<body>
+  <h1><%=user.username;%></h1>
+  Posts:
+  <% posts.forEach(function(post){ %>
+    <%- include('post.ejs', {post:post});%>
+  <% }); %>
+</body>
+</html>
